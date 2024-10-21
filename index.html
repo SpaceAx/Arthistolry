@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -34,6 +34,19 @@
         main.style.filter = "blur(0px)";
       }, 1000);
     });
+
+    // Dropdown Toggle Functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownButtons = document.querySelectorAll('.dropdown-button');
+      dropdownButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const dropdownMenu = this.nextElementSibling;
+          const isOpen = dropdownMenu.classList.contains('open');
+          document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('open'));
+          if (!isOpen) dropdownMenu.classList.add('open');
+        });
+      });
+    });
   </script>
 </head>
 <body>
@@ -51,7 +64,7 @@
           Arthistolry
         </button>
         <ul class="dropdown-menu">
-          <!-- Empty for now, fill with content later -->
+          <!-- Content can be added here later -->
         </ul>
       </li>
 
@@ -61,7 +74,7 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            Kebudayaan selayaknya tumbuhan yang bisa tumbuh, berkembang, layu, dan mati. Apabila dibiarkan menerima elemen-elemen asing dari luar tanpa ada perlindungan, dia akan lenyap. Begitupun kebudayaan yang telah mendarah daging dengan bangsa Indonesia. Multikultural ini akan semakin terabaiakan bila kita sebagai pemilik budaya tidak mampu melestarikan cagar budaya di Indonesia. Dengan meneguhkan kekuatan cagar budaya multikultur area kita tidak akan kehilangan identitas bangsa. Multikultur area adalah keragaman budaya yang berkembang disuatu wilayah khusus. Multikultur area dapat dikatakan nama lain dari kearifan lokal. Tuban terpilih sebagai salah satu multikultur area Indonesia. Karena, lokasi geografis Tuban berada dipinggir pantai utara Jawa yang menghubungkan Jawa dan Jakarta. Selain itu, beberapa julukan kota Tuban sebagai kota Tuak, kota seribu goa, bumi wali, dan lainnya. Keduanya, melukiskan gambaran luas budaya yang tumbuh di Tuban. Fokus penelitian ini terletak pada peneguhan Tuban sebagai multikultur area melalui tinggalan cagar budaya. Tujuan penelitian adalah menjelaskan cagar budaya di Tuban untuk meneguhkan Tuban sebagai multikultur area. Penelitian ini menerapkan metode penelitian kualitatif dan pustaka. Awal peradaban Tuban telah dikenal sebagai salah satu kota pelabuhan terbesar di Jawa, sehingga hal ini mendedikasikan Tuban menjadi salah satu multikultur area dan dapat dibuktikan melalui cagar budaya yang tersebar di Tuban. Cagar budaya yang menunjukkan perjalanan kehidupan Tuban dari era sejarah menuju modern.
+            Kebudayaan selayaknya tumbuhan yang bisa tumbuh, berkembang, layu, dan mati. Apabila dibiarkan menerima elemen-elemen asing dari luar tanpa ada perlindungan, dia akan lenyap. Begitupun kebudayaan yang telah mendarah daging dengan bangsa Indonesia...
           </li>
         </ul>
       </li>
@@ -72,7 +85,7 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            Cosplay, akronim dari costume play, pelakunya disebut cosplayer adalah sebuah fenomena dari budaya pop yang sangat digemari oleh generasi Z (milenial). Perbuatan/aksi mengimitasi sosok karakter tertentu ini telah menciptakan sebuah sub-culture, sehingga penggunaan istilah “cosplay” ini memiliki makna yang lebih luas di luar panggung. Perilaku dress-up atau berdandan menyerupai identitas tertentu sebenarnya telah ada sejak awal abad 20, yaitu berdandan menyerupai hantu atau penyihir pada event Halloween, tetapi terminologi “cosplay” baru mulai populer pada awal abad 21. Akar budayanya berasal dari invasi budaya pop Jepang ke seluruh dunia melalui manga (komik) & dunia animasi (anime).
+            Cosplay, akronim dari costume play, pelakunya disebut cosplayer adalah sebuah fenomena dari budaya pop yang sangat digemari oleh generasi Z (milenial)...
           </li>
         </ul>
       </li>
