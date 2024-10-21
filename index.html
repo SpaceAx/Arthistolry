@@ -2,12 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SMAN 4 Tuban - Links</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMAN 4 Tuban - Links</title>
   <link rel="stylesheet" href="index.css">
   <link rel="preload" href="https://telegra.ph/file/3b4493222e50baa9cbe79.jpg" as="image">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      background-color: #101010;
+    }
+
+    body {
+      background: url('https://telegra.ph/file/3b4493222e50baa9cbe79.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    #vanta {
+      z-index: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      filter: blur(10px);
+      transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header img {
+      width: 6em;
+      height: 6em;
+      border-radius: 100%;
+      border: 2px solid #fff;
+      box-shadow: rgba(28, 32, 93, 0.24) 0px 2px 8px;
+    }
+
+    header h1 {
+      margin-top: 1em;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0.5em 1em;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 2em;
+      margin: 0 auto;
+      max-width: 480px;
+    }
+
+    ul > li {
+      margin: 1.5em 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      box-shadow: rgba(28, 32, 93, 0.24) 0px 4px 12px;
+      overflow: hidden;
+    }
+
+    .dropdown-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      font-size: 1.2em;
+      color: #101010;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-button img {
+      margin-right: 0.5em;
+      width: 24px;
+    }
+
+    .dropdown-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown-menu {
+      display: none;
+      padding: 1em;
+      background-color: #fff;
+      color: #101010;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .open .dropdown-menu {
+      display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header img {
+        width: 4em;
+        height: 4em;
+      }
+
+      header h1 {
+        font-size: 1.2em;
+      }
+
+      ul {
+        padding: 1em;
+      }
+
+      .dropdown-button {
+        font-size: 1em;
+      }
+    }
+  </style>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       VANTA.BIRDS({
@@ -33,17 +160,14 @@
         main.style.opacity = 1;
         main.style.filter = "blur(0px)";
       }, 1000);
-    });
 
-    // Dropdown Toggle Functionality
-    document.addEventListener('DOMContentLoaded', function () {
       const dropdownButtons = document.querySelectorAll('.dropdown-button');
       dropdownButtons.forEach(button => {
         button.addEventListener('click', function () {
-          const dropdownMenu = this.nextElementSibling;
-          const isOpen = dropdownMenu.classList.contains('open');
-          document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('open'));
-          if (!isOpen) dropdownMenu.classList.add('open');
+          const parentLi = this.parentElement;
+          const isOpen = parentLi.classList.contains('open');
+          document.querySelectorAll('li').forEach(li => li.classList.remove('open'));
+          if (!isOpen) parentLi.classList.add('open');
         });
       });
     });
@@ -54,40 +178,35 @@
   <main class="animated">
     <header>
       <img src="https://link-in-bio-ruby.vercel.app/images/takuya.jpg" alt="Profile Image">
-      <h1>SMAPAT Tuban</h1>
+      <h1>SMAN 4 Tuban - Links</h1>
     </header>
 
     <ul>
       <li>
         <button class="dropdown-button">
-          <img src="https://link-in-bio-ruby.vercel.app/images/homepage.svg" alt="Homepage Icon" width="24">
-          Arthistolry
+          <img src="https://link-in-bio-ruby.vercel.app/images/homepage.svg" alt="Homepage Icon"> Arthistolry
         </button>
-        <ul class="dropdown-menu">
-          <!-- Content can be added here later -->
-        </ul>
+        <div class="dropdown-menu">
+          <p>No content available yet.</p>
+        </div>
       </li>
 
       <li>
-        <button class="dropdown-button">
-          CAGAR BUDAYA SEBAGAI PENEGUHAN TUBAN YANG MULTIKULTUR
-        </button>
-        <ul class="dropdown-menu">
-          <li>
+        <button class="dropdown-button">CAGAR BUDAYA SEBAGAI PENEGUHAN TUBAN YANG MULTIKULTUR</button>
+        <div class="dropdown-menu">
+          <p>
             Kebudayaan selayaknya tumbuhan yang bisa tumbuh, berkembang, layu, dan mati. Apabila dibiarkan menerima elemen-elemen asing dari luar tanpa ada perlindungan, dia akan lenyap. Begitupun kebudayaan yang telah mendarah daging dengan bangsa Indonesia...
-          </li>
-        </ul>
+          </p>
+        </div>
       </li>
 
       <li>
-        <button class="dropdown-button">
-          Cosplay Sebagai Fenomena Budaya Populer
-        </button>
-        <ul class="dropdown-menu">
-          <li>
-            Cosplay, akronim dari costume play, pelakunya disebut cosplayer adalah sebuah fenomena dari budaya pop yang sangat digemari oleh generasi Z (milenial)...
-          </li>
-        </ul>
+        <button class="dropdown-button">Cosplay Sebagai Fenomena Budaya Populer</button>
+        <div class="dropdown-menu">
+          <p>
+            Cosplay, akronim dari costume play, adalah fenomena dari budaya pop yang sangat digemari oleh generasi Z (milenial). Aksi mengimitasi karakter tertentu telah menciptakan sebuah sub-culture...
+          </p>
+        </div>
       </li>
     </ul>
   </main>
