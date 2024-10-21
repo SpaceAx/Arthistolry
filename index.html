@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SMAN 4 Tuban - Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preload" href="https://telegra.ph/file/3b4493222e50baa9cbe79.jpg" as="image">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      VANTA.BIRDS({
+        el: "#vanta",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        backgroundAlpha: 0.0,
+        color2: 0xff00f0,
+        wingSpan: 40.0,
+        separation: 100.0,
+        alignment: 77.0,
+        cohesion: 5.0,
+        quantity: 1.0,
+      });
+
+      setTimeout(() => {
+        const main = document.querySelector("main");
+        main.style.opacity = 1;
+        main.style.filter = "blur(0px)";
+      }, 1000);
+    });
+  </script>
+</head>
+<body>
+  <div id="vanta"></div>
+  <main class="animated">
+    <header>
+      <img src="https://link-in-bio-ruby.vercel.app/images/takuya.jpg" alt="Profile Image">
+      <h1>SMAPAT Tuban</h1>
+    </header>
+
+    <ul>
+      <li>
+        <button class="dropdown-button">
+          <img src="https://link-in-bio-ruby.vercel.app/images/homepage.svg" alt="Homepage Icon" width="24">
+          Arthistolry
+        </button>
+        <ul class="dropdown-menu">
+          <!-- Empty for now, fill with content later -->
+        </ul>
+      </li>
+
+      <li>
+        <button class="dropdown-button">
+          CAGAR BUDAYA SEBAGAI PENEGUHAN TUBAN YANG MULTIKULTUR
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            Kebudayaan selayaknya tumbuhan yang bisa tumbuh, berkembang, layu, dan mati...
+            <!-- More content -->
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <button class="dropdown-button">
+          Cosplay Sebagai Fenomena Budaya Populer
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            Cosplay, akronim dari costume play, pelakunya disebut cosplayer...
+            <!-- More content -->
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
